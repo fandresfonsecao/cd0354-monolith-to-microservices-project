@@ -18,6 +18,8 @@ script:
   - docker tag udagram-api-user fandresfonsecao/udagram-api-user:v1
   - docker tag udagram-frontend fandresfonsecao/udagram-frontend:v1
   - docker tag udagram-reverseproxy fandresfonsecao/udagram-reverseproxy:v1
+  - echo "*****Images*****"
+  - docker images
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push fandresfonsecao/udagram-api-feed:v1
