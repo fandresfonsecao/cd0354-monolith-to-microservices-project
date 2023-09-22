@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 ## Install app dependencies
 ## A wildcard is used to ensure both package.json AND package-lock.json are copied
 COPY package*.json ./
-RUN rm package-lock.json 
+RUN npm install -f
 RUN npm i
 ## Bundle app source
 COPY . .
