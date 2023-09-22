@@ -7,6 +7,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install -f
 RUN npm i
+RUN npm i -D typescript@3.4.5
 ## Bundle app source
 COPY . .
 RUN ionic build
