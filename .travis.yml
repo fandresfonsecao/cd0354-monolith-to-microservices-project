@@ -1,6 +1,7 @@
 language: minimal
 services: docker
 install:
+  - npm --version
   - docker --version
   - docker-compose -f docker-compose-build.yaml build --parallel
   - docker tag udagram-api-feed fandresfonsecao/udagram-api-feed:v1 
